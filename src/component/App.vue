@@ -1,7 +1,13 @@
 <template>
   <main>
     <h1>{{ title }}</h1>
+    <div>
+        公共头部
+        <router-view></router-view>
+        公共底部
+    </div>
   </main>
+  
 </template>
 
 <script>
@@ -9,7 +15,7 @@
 export default {
     data() {
         return {
-            title: 'Hello World!'
+            title: 'Hello Vue!'
         }
     }
 }
