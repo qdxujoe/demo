@@ -18,8 +18,8 @@ module.exports = {
 
         // 自动注入打包好的js文件到body里
         new htmlWebapckPlugin({
-            template: 'template.html',        // 要处理的html
-            filename: './src/index.html',                 // 处理后的html名称
+            template: './src/index.html',        // 要处理的html
+            filename: 'index.html',                 // 处理后的html名称
             inject: 'body',  
             title:"hello vue"                             // 自动注入js到什么地方
         }),
