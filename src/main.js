@@ -24,8 +24,10 @@ import api from './js/api-config.js';
 Vue.prototype.$api=api;
 
 //导入element-ui与样式文件
-// import ElementUI from 'element-ui';
-// import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+//2开启vue插件
+Vue.use(ElementUI);
 
 // 渲染根组件到占位标签上
 new Vue({

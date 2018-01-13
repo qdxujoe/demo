@@ -6,6 +6,10 @@
         <router-view></router-view>
         公共底部
     </div>
+    <el-rate
+    v-model="value"
+    :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
+  </el-rate>
   </main>
   
 </template>
@@ -15,7 +19,8 @@
 export default {
     data() {
         return {
-            title: 'Hello Vue!'
+            title: 'Hello Vue!',
+            value: 3,
         }
     }
 }
