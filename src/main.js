@@ -1,6 +1,8 @@
 // 导入Vue库
 import Vue from 'Vue';
 
+//引入自己写的样式
+import './less/index.css';
 //1导入路由库
 import VueRouter from 'vue-router';
 
@@ -8,7 +10,6 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 // 导入自己写的根组件
 import App from './component/App.vue';
-
 //3导入路由配置
 import routerConfig from './router/index.js'
 
