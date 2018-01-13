@@ -7,7 +7,7 @@
         <!-- 头部 -->
         <el-container>
           <el-header>
-            <header></header>
+            <Header></Header>
             
           </el-header>
           <!-- 主体 -->
@@ -20,12 +20,12 @@
 
 <script>
 
-import Aside from 'common/Aside';
-import Header from 'common/Header';
+import Aside from './common/Aside.vue';
+import Header from './common/Header.vue';
 export default{
   components: {
-    Header:'',
-    Aside:'',
+    Header,
+    Aside,
   }
 }
 </script>
@@ -45,4 +45,5 @@ export default{
     background-color: #E9EEF3;
     color: #333;
   }
+ 
 </style>
