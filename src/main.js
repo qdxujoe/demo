@@ -29,6 +29,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 //2开启vue插件
 Vue.use(ElementUI);
 
+//导入normalize.css样式
+import 'normalize.css';
+
 // 渲染根组件到占位标签上
 new Vue({
     el: '#app',
