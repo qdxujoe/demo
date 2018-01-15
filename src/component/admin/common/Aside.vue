@@ -6,7 +6,7 @@
 
             <!-- 标题内容 -->
             <template slot="title">
-                <i class="el-icon-location"></i>
+                <i class="el-icon-sold-out"></i>
                 <span>{{ item.title }}</span>
             </template>
 
@@ -89,5 +89,12 @@
 </script>
 
 <style scoped>
-
+    a{
+            text-decoration: none;
+            color: brown;
+           
+        }
+        .el-menu{
+            background-color: #d3dce6;
+        }
 </style>

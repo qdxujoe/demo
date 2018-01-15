@@ -1,8 +1,8 @@
 <template>
     <div class="box">
-        <h1 ref="wokaixin" style="color:#fff">后台管理</h1>
+        <h1 ref="wokaixin">后台管理</h1>
         <!-- model用来关联表单数据, rules用来指定校验规则 -->
-        <el-form label-position="left" label-width="80px" ref="ruleForm2" :model="formLabelAlign" :rules="rules">
+        <el-form label-position="left" label-width="60px" ref="ruleForm2" :model="formLabelAlign" :rules="rules">
             <!-- 如果要表单校验与重置功能, 必须加上prop属性 -->
             <el-form-item label="账号" prop="uname">
                 <el-input v-model="formLabelAlign.uname"></el-input>
@@ -51,9 +51,9 @@
                             trigger: 'blur'
                         },
                         {
-                            min: 6,
+                            min: 5,
                             max: 18,
-                            message: '账号在6~18位',
+                            message: '账号在5~18位',
                             trigger: 'blur'
                         },
                         {
@@ -79,7 +79,10 @@
             login() {
                 this.$http.post(this.$api.login, this.formLabelAlign).then(res => {
                     if (res.data.status == 0) {
-                        this.$router.push('{name:"admin"}');
+                       let nextPage=this.$route.query.nexpage;
+                       this.$router.push({
+                           path:nextPage?nextPage:'/admin'
+                       });
                     } else {
                         this.$alert(res.data.message);
                     }
@@ -113,16 +116,17 @@
 
 <style scoped>
      .box{
-        width: 600px;
+        width: 400px;
         height: 300px;
-        border: 1px solid rgb(238, 238, 245);
-        margin:  200px auto;
-        position: relative;
-        left: 10px;
-        top: 50%;
+        border: 1px solid rgb(247, 10, 10);
+         margin:  150px auto;
         border-radius: 6px;
+        padding: 0px 30px; 
+        text-align: center;
     }
+    
     h1{
         text-align: center;
+        color: rgb(247, 10, 10);
     }
 </style>

@@ -41,5 +41,7 @@
             display: block;
             text-align: right;
             line-height: 60px;
+           color: #fff;
         }
+       
     </style>

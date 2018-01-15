@@ -1,7 +1,8 @@
 html,
 body {
   height: 100%;
-  background-color: blue;
+  width: 100%;
+  background-color: #01010f;
   margin: 0;
   padding: 0;
 }
